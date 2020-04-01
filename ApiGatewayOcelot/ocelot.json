@@ -1,0 +1,43 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/{anyparamandcontroller}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/{anyparamandcontroller}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //{
+    //  "DownstreamPathTemplate": "/api/orders/{anyparam}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5002
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/api/orders/{anyparam}",
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //},
+    {
+      "DownstreamPathTemplate": "/api/catalog",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalog",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5000"
+  }
+}
